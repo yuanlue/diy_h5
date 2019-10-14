@@ -83,10 +83,6 @@ const config = {
 App.init(config)
 ```
 
-## 截图
-
- ![配图3](/screenshot/img3.jpg "配图3")
-
 
 ## 最后
 
