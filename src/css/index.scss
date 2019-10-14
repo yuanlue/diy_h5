@@ -1,0 +1,672 @@
+@charset "UTF-8";
+body, div, ul, li, img, p, a, h1, h2, h3,input {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: "YouYuan","microsoft yahei";
+}
+a{text-decoration: none;}
+li{list-style: none;}
+html, body {
+	position: relative;
+    width: 750px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #000;
+}
+.opera{
+    text-align: center;
+}
+.c_logo{
+    position: absolute;
+    bottom:20px;
+    width:100%;
+    text-align: center;
+}
+#music_ctrl{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    top: 50px;
+    background: url(/images/vanke/gq/music_on.png) no-repeat;
+    -webkit-animation: musicPlay 2s linear infinite;
+    animation: musicPlay 2s linear infinite;
+    z-index: 1000;
+}
+.n_info{
+    text-align: right;
+    font-size:20px;
+    margin-right:20px;
+}
+.info{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top:120px;
+    z-index:2;
+    right:44px;
+    align-items: center;
+}
+.v_logo{
+    position: absolute;
+    top:50px;
+    left:50px;
+}
+#music_ctrl.stop{
+    -webkit-animation-play-state: paused;
+    background: url(/images/vanke/gq/music_off.png) no-repeat;
+
+    animation-play-state: paused;
+}
+.db{
+    display: none;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    background: white;
+    z-index:3;
+}
+@-webkit-keyframes musicPlay{
+    from{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes musicPlay{
+    from{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.page{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+	background:white;
+	z-index: 10000;
+	.box{
+	    width: 100%;
+	    height: 100vh;
+	    position: absolute;
+	    left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+    .ani{
+        text-align: center;
+    }
+    .ani span{
+        width:400px;
+        height:668px;
+        display: inline-block;
+        background: url('/images/vanke/gq/Assest/loading/loading.png') no-repeat;
+        background-size:1600px 668px;
+        background-position: 0 0 ;
+        animation: m_ani 2s  steps(1, start) infinite; 
+
+    }
+    .load_title{
+        width:100%;
+        text-align: center;
+        left:0;
+        position: absolute;;
+        top:170px;
+    }
+  
+	.btn-start{
+	    display: none;
+	    height: 100px;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 91px;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    bottom: 158px;
+	}
+	.progress{
+		font-size: 28px;
+		color: #0d3b5f;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+.container{
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cs-room{
+    width: 100%;
+    height: 100%;
+    background: url(/images/vanke/gq/Room.jpg) center bottom no-repeat;
+    .cs-item{
+        text-align: center;
+        z-index:1;
+        position: absolute;
+        border: 1px solid transparent;
+        // -webkit-transition: transform 0.2s;
+        // transition: transform 0.2s;
+        .cs-body{
+            width: 96%;
+            margin-top: 1%;
+        }
+        .cs-btn-resize,.cs-btn-remove,.cs-btn-rotate{
+            width: 60px;
+            height: 60px;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            position: absolute;
+            display: none;
+        }
+        .cs-btn-resize{
+            background-image: url(/images/vanke/gq/resize.png);
+            top: -30px;
+            right: -30px;
+            z-index: 100;
+        }
+        .cs-btn-remove{
+            background-image: url(/images/vanke/gq/remove.png);
+            left: -30px;
+            bottom: -30px;
+        }
+        .cs-btn-rotate{
+            background-image: url(/images/vanke/gq/rotate.png);
+            left: -30px;
+            top: -30px;
+        }
+        &.active{
+            border: 1px solid black;
+            .cs-btn-resize,.cs-btn-remove,.cs-btn-rotate{
+                display: block;
+            }
+        }
+    }
+}
+.bottom,.footer,.tip-layer{
+    width: 100%;
+    height: 215px;
+    border-top: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.dialog-toast .dialog-content {
+    width: 296px;
+    height: 296px;
+}
+
+.dialog-toast .info-text {
+    font-size: 32px;
+}
+
+.dialog-toast .info-icon {
+    width: 112px;
+    max-width: 112px;
+}
+
+.dialog-notice .info-text {
+    font-size: 28px;
+}
+.bottom_text {
+position: absolute;
+;
+width: 100%;
+bottom: 50px;
+text-align: center;
+}
+.shb{
+    position: relative;
+}
+.db_contain{
+    padding-top:100px;
+}
+.deco1{
+    position: absolute;
+    bottom:0;
+    right:-75px;
+    z-index:2
+}
+.deco2{
+    bottom:-20px;
+    left:0;
+    position: absolute;
+    z-index:2
+
+}
+.deco3{
+    right:-30px;
+    top:-160px;
+    position: absolute;
+    z-index:2
+
+}
+.deco4{
+    position: absolute;
+    top:30px;
+    left:-15px;
+}
+.decor>img:first-child{
+    position: absolute;
+    right:0;
+    bottom:-47px;
+}
+.pop_hb_contain .avatar{
+position:absolute;
+top:131px;
+right:38px;
+width:80px;
+height:80px;
+}
+.n_t{
+    float: right;
+}
+.pop_hb_contain>p{
+text-align:right;
+width:200px;
+position:absolute;
+top:167px;
+right:127px;
+}
+.pop_hb_contain .avatar img{
+width:100%;
+}
+#ewm{
+    position:absolute;
+    bottom:40px;
+    right:40px;
+    display:flex;
+    align-items:center;
+    z-index:3;
+    background:url('/images/vanke/gq/ewm_box.png') no-repeat;
+    background-size:cover;
+    width:240px;
+    height:83px;
+    }
+#ewm span{
+padding:5px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+font-size: 16px;
+font-weight:bold;
+display:inline-block;
+}
+#ewm img{
+    position: absolute;
+    right:0;
+width:75px;
+right:2px;
+}
+
+#music{
+width:80px;
+height:80px;
+position:absolute;
+right:50px;
+top:50px;
+background:url(/images/vanke/gq/music_on.png) no-repeat;
+animation:musicPlay 2s linear infinite;
+z-index:1000;
+}
+.info>img{
+width:100px;
+border:1px solid #f2f2f2;
+
+}
+#opera{
+text-align:center;
+}
+#music.stop{
+-webkit-animation-play-state: paused;
+background: url(/images/vanke/gq/music_off.png) no-repeat;
+
+animation-play-state: paused;
+}
+.c_text{
+position:absolute;
+bottom: 397px;
+left: 40px;
+}  
+
+.bottom{
+    display: none;
+    background: #fff;
+    .text{
+        font-size: 36px;
+        text-align: center;
+        line-height: 215px;
+    }
+}
+
+
+.cs_hidd{
+    padding:0 !important;
+    height:0 !important;
+    padding-top:20px !important;
+}
+.rotate img{
+    transform: rotate(180deg);
+    transition: all 1s;
+}
+.arrow{
+    width: 54px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,144,146,1);
+    border-radius:6px 6px 0px 0px;
+    border:2px solid rgba(0,0,0,1);
+    position: absolute;
+    top: -23px;
+    right: 60px;
+    margin: 0 auto;
+    // -webkit-animation: arrowMove 1s linear infinite;
+    // animation: arrowMove 1s linear infinite;
+}
+@-webkit-keyframes arrowMove{
+    0%{
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    100%{
+        -webkit-transform: translate(0,20px);
+        transform: translate(0,20px);
+    }
+}
+@keyframes arrowMove{
+    0%{
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    100%{
+        -webkit-transform: translate(0,20px);
+        transform: translate(0,20px);
+    }
+}
+@-webkit-keyframes m_ani {
+    
+    25%{
+        background-position:0 0;
+    }
+    50%{
+        background-position:-400px 0;
+    }
+    50%{
+        background-position:-800px 0;
+    }
+    100%{
+        background-position:-1200px 0;
+    }
+  }
+.save_img{
+    z-index:1;
+    position: relative;
+    overflow-y: hidden;
+    width:640px;
+    height:860px;
+    margin-bottom:40px;
+}
+.pop_hb_contain .save_img{
+    width:520px;
+    height:720px;
+    position: absolute;
+    top:276px;
+    margin:0;
+    left:27px;
+    overflow: hidden;
+}
+#hb{
+    display: none;
+    width:580px;
+    height:1032px;
+}
+.pop_hb_contain{
+    background:url('/images/vanke/gq/Assest/db/hb.png') no-repeat;
+    background-size:cover;
+    width: 580px;
+    height:1032px;
+    position: relative;;
+}
+.pop_hb{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,0.3);
+    z-index:4;
+    display: none;  
+    align-items: center;
+    justify-content: center;
+}
+.pop_hb .s_img{
+    margin:0;
+    width:520px;
+}
+.s_img{
+    margin-top:45px;
+    margin-bottom: 48px;
+   width:100%;
+    display: block;
+}
+.cs-tab-layer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index:2;
+    left: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    &.close{        
+        bottom: -366px;
+        .cs-btn-close{
+            display: none;
+        }
+    }
+    .cs-btn-camera{
+        width:107px;
+        height: 107px;
+        background: url(/images/vanke/gq/icon_camera.png) no-repeat;
+        position: absolute;
+        bottom: 385px;
+        right: 40px;
+    }
+}
+.cs-tab-tools{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 124px;
+    border-left:2px solid rgba(0,0,0,1);
+    border-right:2px solid rgba(0,0,0,1);
+
+    box-sizing: border-box;
+
+    background: #FFEEED;
+    .cs-tab-btn{
+        height: 122px;
+        width: 25%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid black;
+        text-align: center;
+        font-size: 29px;
+        line-height: 126px;
+        color: #017cc2;
+        padding: 0;
+    }
+    .active{
+        border-bottom:0;
+    }
+    .active img{
+        position: relative;
+        z-index:3;
+    }
+    .active:after{
+       content:"";
+       display: inline-block;
+       position: absolute;
+       left:0;
+       top:-21px;
+       width: 188px;
+       height:141px;
+       background:url('/images/vanke/gq/active.png') no-repeat;
+       background-size:100% 100%;
+    }
+ 
+    .cs-btn-close{
+        float: right;
+        width: 100px;
+        height: 100%;
+        background: url(/images/vanke/gq/icon_arrow2.png) center center no-repeat;
+    }
+}
+.cs-tab-contents{
+    width: 100%;
+    height: auto;
+    padding:20px 18px;
+    padding-right: 250px;
+    box-sizing: border-box;
+    background: #FF6F6F;
+    border:2px solid rgba(0,0,0,1);
+
+    overflow: auto;;
+    .cs-tab-con{
+        box-sizing: border-box;
+
+        display: none;
+        height: auto;
+        overflow-y:hidden;
+
+        -webkit-overflow-scrolling: touch;
+        &.active{
+            display: block;
+        }
+        li{
+            margin-right:30px;
+            display: inline-block;
+            width: 63px;
+            height: 84px;;
+            background: url() center center no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            &.active{
+                // background-color: #f1f1f1;
+            }
+        }
+    }
+}
+
+
+
+.cs-pic{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+.loading-box{
+    width: 220px;
+    height: 176px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index:4;
+    margin-left: -110px;
+    margin-top: -88px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    .icon{
+        width: 90px;
+        height: 90px;
+        margin: 10px auto 2px;
+        background-image: url("data:image/svg+xml;charset=utf8, <svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100'><path fill='none' d='M0 0h100v100H0z'></path><rect width='7' height='20' x='46.5' y='40' fill='%23E9E9E9' rx='5' ry='5' transform='translate(0 -30)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23989697' rx='5' ry='5' transform='rotate(30 105.98 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%239B999A' rx='5' ry='5' transform='rotate(60 75.98 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23A3A1A2' rx='5' ry='5' transform='rotate(90 65 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23ABA9AA' rx='5' ry='5' transform='rotate(120 58.66 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23B2B2B2' rx='5' ry='5' transform='rotate(150 54.02 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23BAB8B9' rx='5' ry='5' transform='rotate(180 50 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23C2C0C1' rx='5' ry='5' transform='rotate(-150 45.98 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23CBCBCB' rx='5' ry='5' transform='rotate(-120 41.34 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23D2D2D2' rx='5' ry='5' transform='rotate(-90 35 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23DADADA' rx='5' ry='5' transform='rotate(-60 24.02 65)'></rect><rect width='7' height='20' x='46.5' y='40' fill='%23E2E2E2' rx='5' ry='5' transform='rotate(-30 -5.98 65)'></rect></svg>");
+        background-size: 100%;
+        -webkit-animation: loadingRotate 1s steps(12,end) infinite;
+        animation: loadingRotate 1s steps(12,end) infinite;
+    }
+    .content{
+        color: #fff;
+        margin: 0;
+        padding: 0 15px 10px;
+        text-align: center;
+        font-size: 28px;
+        margin-top: 16px;
+    }
+}
+@-webkit-keyframes loadingRotate{
+    0%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes loadingRotate{
+    0%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.tip-layer{
+    background: #fff;
+    z-index: 999999;
+    line-height: 215px;
+    font-size: 36px;
+    text-align: center;
+    -webkit-transform: translate(0,230px);
+    transform: translate(0,230px);
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    &.show{
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+
+

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=750,user-scalable=no">
+    <title>万科假期style大比拼</title>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript" src="http://cdn.yskj.howlab.cn/js/canvas.js"></script>
+
+    <script type=text/javascript src=https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js></script>
+    <script type="text/javascript" src="http://cdn.yskj.howlab.cn/js/vanke/dialog.min.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.yskj.howlab.cn/css/vanke/dialog.css">
+</head>
+<style>
+    .dialog-toast .dialog-content {
+        width: 296px;
+        height: 296px;
+    }
+
+    .load .load_title {
+        padding-left: 10px;
+    }
+
+    .dialog-toast .info-text {
+        font-size: 32px;
+    }
+
+    .n_t {
+        width: auto;
+    }
+
+    .dialog-toast .info-icon {
+        width: 112px;
+        max-width: 112px;
+    }
+
+    .pop_hb_contain>div {
+        text-align: right;
+        position: absolute;
+        top: 167px;
+        right: 127px;
+    }
+
+    .dialog-notice .info-text {
+        font-size: 28px;
+    }
+
+    .cs-tab-layer .cs-btn-camera {
+        display: block !important;
+    }
+
+    .load .load_title {
+        top: 120px;
+    }
+
+    .save_img {
+        height: 65vh;
+    }
+
+    .db .deco2,
+    .db .deco3 {
+        z-index: 0;
+    }
+
+    .db .deco1 {
+        right: -82px;
+    }
+
+    .db_contain {
+        padding-top: 100px;
+    }
+
+    .pop_hb {
+        background: rgba(0, 0, 0, 0.75)
+    }
+
+   
+    .db .deco4 {
+        top: -15px;
+    }
+
+    .s_img {
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .c_logo {
+        bottom: 10px;
+    }
+
+    @media screen and (max-height: 1350px) {
+        .db_contain {
+            padding-top: 170px;
+        }
+    }
+
+    @-webkit-keyframes m_ani {
+
+       
+        33% {
+            background-position: -400px 0;
+        }
+        66% {
+            background-position: -800px 0;
+        }
+        100% {
+            background-position: -1200px 0;
+        }
+    }
+
+    .deco3 {
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div id='music'></div>
+    <div class="page load">
+        <div>
+            <div class='load_title'><img src='/images/vanke/gq/Assest/loading/title.png' alt=""></div>
+            <div class='ani'><span></span></div>
+        </div>
+        <div class="pa center box">
+            <div class=btn-start><img src='/images/vanke/gq/Assest/loading/btn.png' alt=""></div><!-- <p class="progress">0%</p> -->
+        </div>
+        <div class='v_logo'><img src='/images/vanke/gq/Assest/db/v_logo.png' alt=""></div>
+
+        <div class='c_logo'><img src='/images/vanke/gq/Assest/db/c_logo.png?1' alt=""></div>
+        <div class="c_text">
+            <img src="/images/vanke/gq/Assest/loading/text.png" alt="">
+        </div>
+    </div>
+    <div class="page main">
+        <div class='pop_hb'>
+            <div class='bottom_text'><img src='/images/vanke/gq/Assest/db/text2.png' alt=""></div><img id=hb src="" alt=""><div
+                class='pop_hb_contain'>
+                <span id="ewm">
+
+                    <img src="/images/vanke/gq/ewm.png" alt="">
+                </span>
+                <span class="avatar">
+                    <img src="" alt="">
+                </span>
+
+
+                <div class='save_img'>
+
+                    <img class='s_img' src="" alt=""></div>
+                <div>
+                    <div>
+                        <span class="nickiname"></span>
+                        <span class="n_text_pro">十一宅在家</span>
+                    </div>
+
+                    <span class="n_t">“当全世界都在堵，还是窝在家里最舒服 </span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='db'><span class='v_logo'><img src='/images/vanke/gq/Assest/db/v_logo.png' alt=""></span><div class=db_contain>
+            <div class='info'>
+                <div class='n_info'><img src='/images/vanke/gq/Assest/db/text.png' alt="">
+                    <p>
+                        <div>
+                            <span id="nickiname"></span>
+                            <span class="n_text_pro">十一宅在家</span>
+                        </div>
+                        <span class="n_t">“当全世界都在堵，还是窝在家里最舒服</span>
+                    </p>
+                </div><img src='/images/vanke/gq/Assest/db/avatar.png' alt=""></div>
+            <div class="shb">
+                <div class='save_img'>
+
+                    <img class='s_img' src="" alt="">
+                </div>
+                <span class="deco1"><img src="/images/vanke/gq/Assest/db/db1.png" alt=""></span>
+                <span class="deco2"><img src="/images/vanke/gq/Assest/db/db2.png" alt=""></span>
+                <span class="deco3"><img src="/images/vanke/gq/Assest/db/db2.png" alt=""></span>
+
+                <span class="deco4"><img src="/images/vanke/gq/Assest/db/db4.png" alt=""></span>
+
+            </div>
+            <div id='opera'><img src='/images/vanke/gq/Assest/db/btn.png' alt=""></div>
+        </div>
+        <div class='c_logo'><img src=/images/vanke/gq/Assest/db/c_logo.png?1 alt=""></div>
+    </div>
+    <div class='container' id='view'>
+        <div class='cs-room' id='room'>
+            <div class="cs-item active" score="1" style="width: 750px; height: 1448px; left: 0px; bottom: 0px; margin-left: 0px; margin-top: 0px; z-index: 0;">
+                <img src="/images/vanke/gq/Assest/Items1/al11.png" alt="" class="cs-body" style="width: 100%;">
+                <div class="cs-btn-remove"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class='cs-tab-layer'>
+        <div class='arrow'><img src='/images/vanke/gq/icon_arrow2.png'></div>
+        <div class='cs-btn-camera'></div>
+        <div class='cs-tab-contents'>
+            <div class='cs-btn-close'></div>
+        </div>
+        <div class='cs-tab-tools'></div>
+    </div>
+    <div class="loading-layer page">
+        <div class='loading-box'>
+            <div class='icon'></div>
+            <div class='content'>生成图片中</div>
+        </div>
+        <audio id="bgm" loop src="http://cdn.yskj.howlab.cn/images/vanke/media/bgm_4ffab390.mp3" autoplay></audio>
+    </div><!-- <div class="tip-layer">长按上图保存您的梦想空间</div> -->
+    <script>
+        var l_index = 0
+        var text_list = ['我能想到最浪漫的事，就是和你一起参加活动', '我在西安逛景点，自在快乐赛神仙', '假期出来看美景，青山绿水好心情', '一天不工作，我就不快乐', '当全世界都在堵，还是窝在家里最舒服']
+        var p_text_list = ['十一参与活动', '十一逛景点', '十一看自然', '十一去加班', '十一宅在家']
+    </script>
+    <script type=text/javascript src='http://cdn.yskj.howlab.cn/js/preloadjs-0.6.0.min.js'></script>
+</body>
+<script>
+    $('#music').click(function () {
+        if ($(this).hasClass('stop')) {
+            $(this).removeClass('stop')
+            document.getElementById('bgm').play()
+        } else {
+            $(this).addClass('stop')
+            document.getElementById('bgm').pause()
+
+        }
+    })
+    {# var info = eval(<? php echo json_encode($data); ?>);
+    $('#nickiname').text(info.nickname)
+    $('.nickiname').text(info.nickname)
+    $('.avatar img').attr('src', info.avatar)
+    $('.info>img').attr('src', info.avatar); #}
+
+    {# wx.config({
+        debug: false,
+        appId: '<?php echo isset($share['appid']) ? $share['appid'] : ''; ?>',
+        timestamp: '<?php echo isset($share['js_time']) ? $share['js_time'] : ''; ?>',
+        nonceStr: '<?php echo isset($share['nonceStr']) ? $share['nonceStr'] : ''; ?>',
+        signature: '<?php echo isset($share['signature']) ? $share['signature'] : ''; ?>',
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'hideMenuItems']
+    });
+    var shareMessage = {
+        title: '<?php echo isset($share['sharetitle']) ? $share['sharetitle'] : ''; ?>',
+        desc: '<?php echo isset($share['sharedesc']) ? $share['sharedesc'] : ''; ?>',
+        shareFriendsDesc: '<?php echo isset($share["shareFriendsDesc"]) ? $share["shareFriendsDesc"] : ""; ?>',
+        link: '<?php echo isset($share['shareUrl']) ? $share['shareUrl'] : ''; ?>',
+        imgUrl: '<?php echo isset($share['sharepic']) ? $share['sharepic'] : ''; ?>'
+	};
+    wx.ready(function () {
+        document.getElementById('bgm').play(); //播放音乐
+
+        wx.hideMenuItems({
+            menuList: ['menuItem:copyUrl']
+        });
+        wx.onMenuShareTimeline({
+            title: shareMessage.desc,
+            link: shareMessage.link,
+            imgUrl: shareMessage.imgUrl,
+            success: function () {
+                sharefriends();
+            },
+            cancel: function () { }
+        });
+        wx.onMenuShareAppMessage({
+            title: shareMessage.title,
+            desc: shareMessage.shareFriendsDesc,
+            link: shareMessage.link,
+            imgUrl: shareMessage.imgUrl,
+            type: '',
+            dataUrl: '',
+            success: function () {
+                sharefriend();
+            },
+            cancel: function () { }
+        });
+    }); #}
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ebb5002032d28e82fdfd648987b0dc42";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</html>
